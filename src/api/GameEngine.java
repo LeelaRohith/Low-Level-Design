@@ -104,19 +104,4 @@ public class Main {
     }
 
 }
-class Board{}
-class Player{}
-class Move{}
-class GameResult
-{
-    boolean isOver;
-    String winner;
-    GameResult(boolean isOver,String winner)
-    {
-        this.isOver=isOver;
-        this.winner=winner;
-    }
-}
-class TicTacToe extends Board{
-    String cells[][]=new String[3][3];
-}
+
