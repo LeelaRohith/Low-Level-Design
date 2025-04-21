@@ -1,7 +1,17 @@
 package boards;
 
 import game.Board;
+import game.Cell;
 
 public class TicTacToe extends Board {
-    public String cells[][] = new String[3][3];
+    String cells[][] = new String[3][3];
+    public String getCell(int row,int col)
+    {
+        return cells[row][col];
+    }
+
+    public void setCell(Cell cell, String symbol)
+    {
+        cells[cell.getRow()][cell.getCol()]=symbol;
+    }
 }
