@@ -7,8 +7,18 @@ public class GameResult {
         this.isOver = isOver;
         this.winner = winner;
     }
+
+    @Override
+    public String toString() {
+        return "GameResult{" +
+                "isOver=" + isOver +
+                ", winner='" + winner + '\'' +
+                '}';
+    }
+
     public boolean isOver()
     {
         return isOver;
     }
+
 }

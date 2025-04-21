@@ -14,16 +14,20 @@ public class Main {
         Board board = gameEngine.start("TicTacToe");
         while(!gameEngine.isComplete(board).isOver())
         {
-            Player computer = new Player("O"),opponent=new Player("X");
+            Player computer = new Player("O"),human=new Player("X");
             System.out.println("Make your move!");
-            int row=sc.nextInt(),col=sc.nextInt();
+            System.out.println(board);
+            int row=sc.nextInt();
+            int col=sc.nextInt();
             Move oppMove=new Move(new Cell(row,col));
-            gameEngine.move(board,opponent,oppMove);
+            gameEngine.move(board,human,oppMove);
+            System.out.println(board);
             if(!gameEngine.isComplete(board).isOver()) {
                 Move computerMove = gameEngine.suggestMove(computer, board);
                 gameEngine.move(board, computer, computerMove);
             }
         }
         System.out.println("GameResult"+gameEngine.isComplete(board));
+        System.out.println(board);
     }
 }
